@@ -1,0 +1,218 @@
+clear
+help plot
+ <strong>plot</strong>   Linear plot. 
+    <strong>plot</strong>(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
+    then the vector is plotted versus the rows or columns of the matrix,
+    whichever line up.  If X is a scalar and Y is a vector, disconnected
+    line objects are created and plotted as discrete points vertically at
+    X.
+ 
+    <strong>plot</strong>(Y) plots the columns of Y versus their index.
+    If Y is complex, <strong>plot</strong>(Y) is equivalent to <strong>plot</strong>(real(Y),imag(Y)).
+    In all other uses of <strong>plot</strong>, the imaginary part is ignored.
+ 
+    Various line types, plot symbols and colors may be obtained with
+    <strong>plot</strong>(X,Y,S) where S is a character string made from one element
+    from any or all the following 3 columns:
+ 
+           b     blue          .     point              -     solid
+           g     green         o     circle             :     dotted
+           r     red           x     x-mark             -.    dashdot 
+           c     cyan          +     plus               --    dashed   
+           m     magenta       *     star             (none)  no line
+           y     yellow        s     square
+           k     black         d     diamond
+           w     white         v     triangle (down)
+                               ^     triangle (up)
+                               <     triangle (left)
+                               >     triangle (right)
+                               p     pentagram
+                               h     hexagram
+                          
+    For example, <strong>plot</strong>(X,Y,'c+:') plots a cyan dotted line with a plus 
+    at each data point; <strong>plot</strong>(X,Y,'bd') plots blue diamond at each data 
+    point but does not draw any line.
+ 
+    <strong>plot</strong>(X1,Y1,S1,X2,Y2,S2,X3,Y3,S3,...) combines the plots defined by
+    the (X,Y,S) triples, where the X's and Y's are vectors or matrices 
+    and the S's are strings.  
+ 
+    For example, <strong>plot</strong>(X,Y,'y-',X,Y,'go') plots the data twice, with a
+    solid yellow line interpolating green circles at the data points.
+ 
+    The <strong>plot</strong> command, if no color is specified, makes automatic use of
+    the colors specified by the axes ColorOrder property.  By default,
+    <strong>plot</strong> cycles through the colors in the ColorOrder property.  For
+    monochrome systems, <strong>plot</strong> cycles over the axes LineStyleOrder property.
+ 
+    Note that RGB colors in the ColorOrder property may differ from
+    similarly-named colors in the (X,Y,S) triples.  For example, the 
+    second axes ColorOrder property is medium green with RGB [0 .5 0],
+    while <strong>plot</strong>(X,Y,'g') plots a green line with RGB [0 1 0].
+ 
+    If you do not specify a marker type, <strong>plot</strong> uses no marker. 
+    If you do not specify a line style, <strong>plot</strong> uses a solid line.
+ 
+    <strong>plot</strong>(AX,...) plots into the axes with handle AX.
+ 
+    <strong>plot</strong> returns a column vector of handles to lineseries objects, one
+    handle per plotted line. 
+ 
+    The X,Y pairs, or X,Y,S triples, can be followed by 
+    parameter/value pairs to specify additional properties 
+    of the lines. For example, <strong>plot</strong>(X,Y,'LineWidth',2,'Color',[.6 0 0]) 
+    will create a plot with a dark red line width of 2 points.
+ 
+    Example
+       x = -pi:pi/10:pi;
+       y = tan(sin(x)) - sin(tan(x));
+       plot(x,y,'--rs','LineWidth',2,...
+                       'MarkerEdgeColor','k',...
+                       'MarkerFaceColor','g',...
+                       'MarkerSize',10)
+ 
+    See also <a href="matlab:help plottools">plottools</a>, <a href="matlab:help semilogx">semilogx</a>, <a href="matlab:help semilogy">semilogy</a>, <a href="matlab:help loglog">loglog</a>, <a href="matlab:help plotyy">plotyy</a>, <a href="matlab:help plot3">plot3</a>, <a href="matlab:help grid">grid</a>,
+    <a href="matlab:help title">title</a>, <a href="matlab:help xlabel">xlabel</a>, <a href="matlab:help ylabel">ylabel</a>, <a href="matlab:help axis">axis</a>, <a href="matlab:help axes">axes</a>, <a href="matlab:help hold">hold</a>, <a href="matlab:help legend">legend</a>, <a href="matlab:help subplot">subplot</a>, <a href="matlab:help scatter">scatter</a>.
+
+    <a href="matlab:doc plot">Reference page for plot</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('plot')">Other functions named plot</a>
+
+x = -pi:0.01:pi;
+y = cos(x);
+plot (x,y)
+xlabel('x')
+ylabel('y=cos(x)')
+title ('Graph of cosine from - \pi to \pi')
+plot (x,y)
+plot (x,y, 'g')
+plot (x,y,xlabel, ylabel)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('xlabel', 'C:\Program Files\MATLAB\R2017a\toolbox\matlab\graph2d\xlabel.m', 16)" style="font-weight:bold">xlabel</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\matlab\graph2d\xlabel.m',16,0)">line 16</a>)
+Not enough input arguments.
+} 
+plot (x,y,xlabel('x'))
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('plot')" style="font-weight:bold">plot</a>
+Data must be a single matrix Y or a list of pairs X,Y.
+} 
+
+plot (x,y, '--')
+plot (x,y, 'b:')
+z = sin(x);
+plot (x,y, 'r--', x,z, 'b:')
+legend('cos(x)', 'sin(x)')
+[Warning: There is no axes with which to associate a legend.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend', 'C:\Program Files\MATLAB\R2017a\toolbox\matlab\scribe\legend.p', 204)" style="font-weight:bold">legend</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\matlab\scribe\legend.p',204,0)">line 204</a>)] 
+
+ans = 
+
+  0×0 empty <a href="matlab:helpPopup matlab.graphics.GraphicsPlaceholder" style="font-weight:bold">GraphicsPlaceholder</a> array.
+
+plot (x,y, 'r--', x,z, 'b:')
+legend('cos(x)', 'sin(x)')
+title ('Graph of cosine from - \pi to \pi')
+xlabel('x')
+ylabel('y=cos(x)')
+save Plotting
+help grid
+ <strong>grid</strong>   Grid lines.
+    <strong>grid</strong> ON adds major grid lines to the current axes.
+    <strong>grid</strong> OFF removes major and minor grid lines from the current axes. 
+    <strong>grid</strong> MINOR toggles the minor grid lines of the current axes.
+    <strong>grid</strong>, by itself, toggles the major grid lines of the current axes.
+    <strong>grid</strong>(AX,...) uses axes AX instead of the current axes.
+ 
+    <strong>grid</strong> sets the XGrid, YGrid, and ZGrid properties of
+    the current axes. If the axes is a polar axes then <strong>grid</strong> sets
+    the ThetaGrid and RGrid properties.
+ 
+    AX.XMinorGrid = 'on' turns on the minor grid.
+ 
+    See also <a href="matlab:help title">title</a>, <a href="matlab:help xlabel">xlabel</a>, <a href="matlab:help ylabel">ylabel</a>, <a href="matlab:help zlabel">zlabel</a>, <a href="matlab:help axes">axes</a>, <a href="matlab:help plot">plot</a>, <a href="matlab:help box">box</a>, <a href="matlab:help polaraxes">polaraxes</a>.
+
+    <a href="matlab:doc grid">Reference page for grid</a>
+
+clesr
+{Undefined function or variable 'clesr'.
+} 
+clear
+log3(5)
+
+ans =
+
+    1.4650
+
+help log3
+  [a] = log3(x) - Calculates the base 3 logarithm of x.
+
+rand_int
+
+ans =
+
+    0.6555
+
+
+rand_int
+
+ans =
+
+    0.1712
+
+help rand_int
+  Rand_int gives you a random number from 0 -> 1 
+
+for j = 1:4
+j+2
+end
+
+ans =
+
+     3
+
+
+ans =
+
+     4
+
+
+ans =
+
+     5
+
+
+ans =
+
+     6
+
+x
+{Undefined function or variable 'x'.
+} 
+x = 1:10
+
+x =
+
+     1     2     3     4     5     6     7     8     9    10
+
+for i = 1 : 10 
+x2(i) = x (i) ^ 2; 
+end
+A = [1, 5, -3; 2, 4, 0; -1 ,6 , 9]
+
+A =
+
+     1     5    -3
+     2     4     0
+    -1     6     9
+
+for i = 1:3
+for j = 1:3
+A2(i,j) = A(i,j)^2; 
+end
+end
+A2
+
+A2 =
+
+     1    25     9
+     4    16     0
+     1    36    81
+
+quit

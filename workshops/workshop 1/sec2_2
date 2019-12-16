@@ -1,0 +1,170 @@
+clear
+A = 
+ A = 
+     
+{Error: Expression or statement is incomplete or incorrect.
+} 
+A = [
+2 9 0 0
+0 4 1 4 
+7 5 5 1
+7 8 7 4]
+
+A =
+
+     2     9     0     0
+     0     4     1     4
+     7     5     5     1
+     7     8     7     4
+
+B = [
+-1
+6
+0
+9]
+
+B =
+
+    -1
+     6
+     0
+     9
+
+a = [ 3 -2 4 -5]
+
+a =
+
+     3    -2     4    -5
+
+define 
+{Undefined function or variable 'define'.
+} 
+
+no
+{Undefined function or variable 'no'.
+} 
+now
+
+ans =
+
+     7.373304116355209e+05
+
+A.*b
+{Undefined function or variable 'b'.
+} 
+A.*B
+
+ans =
+
+    -2    -9     0     0
+     0    24     6    24
+     0     0     0     0
+    63    72    63    36
+
+a+4
+
+ans =
+
+     7     2     8    -1
+
+b.*a
+{Undefined function or variable 'b'.
+} 
+B.*a
+
+ans =
+
+    -3     2    -4     5
+    18   -12    24   -30
+     0     0     0     0
+    27   -18    36   -45
+
+a.*B
+
+ans =
+
+    -3     2    -4     5
+    18   -12    24   -30
+     0     0     0     0
+    27   -18    36   -45
+
+a.*B'
+
+ans =
+
+    -3   -12     0   -45
+
+A.*a'
+
+ans =
+
+     6    27     0     0
+     0    -8    -2    -8
+    28    20    20     4
+   -35   -40   -35   -20
+
+A*A
+
+ans =
+
+     4    54     9    36
+    35    53    37    33
+    56   116    37    29
+    91   162    71    55
+
+A^2
+
+ans =
+
+     4    54     9    36
+    35    53    37    33
+    56   116    37    29
+    91   162    71    55
+
+A.^2
+
+ans =
+
+     4    81     0     0
+     0    16     1    16
+    49    25    25     1
+    49    64    49    16
+
+A(2,2)
+
+ans =
+
+     4
+
+A(:,2 3)
+ A(:,2 3)
+       
+{Error: Unexpected MATLAB expression.
+} 
+A(:,2 , 3)
+{Index exceeds matrix dimensions.
+} 
+A(:,2)
+
+ans =
+
+     9
+     4
+     5
+     8
+
+A(2,:)
+
+ans =
+
+     0     4     1     4
+
+A(3,:)
+
+ans =
+
+     7     5     5     1
+
+load('filename.mat')
+save workshop1.mat
+quit 

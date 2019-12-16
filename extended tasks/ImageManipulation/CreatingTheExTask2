@@ -1,0 +1,65 @@
+a = ReadFile('Images\SampleImages\chestxray.jpg' );
+imshow(a)
+imshow(a, [low high])
+{Undefined function or variable 'low'.
+} 
+imshow(a, [flow high])
+{Undefined function or variable 'high'.
+} 
+imshow(a, [0 1])
+imshow(a, [0 255])
+who a
+
+Your variables are:
+
+a  
+
+help a
+a is a variable of type uint8.
+
+size (a)
+
+ans =
+
+   493   600
+
+imshow(a, [ ])
+ReadFile(a);
+{Attempt to execute SCRIPT ReadFile as a function:
+E:\3rd year\Image Pro\extended tasks\extended task wk2\ReadFile.m
+} 
+ReadFile(a);
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread>parse_inputs', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\imagesci\imread.p', 450)" style="font-weight:bold">imread>parse_inputs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\imagesci\imread.p',450,0)">line 450</a>)
+The file name or URL argument must be a character vector.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\imagesci\imread.p', 322)" style="font-weight:bold">imread</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\imagesci\imread.p',322,0)">line 322</a>)
+[filename, fmt_s, extraArgs, was_cached_fmt_used] = parse_inputs(cached_fmt, varargin{:});
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ReadFile', 'E:\3rd year\Image Pro\extended tasks\extended task wk2\ReadFile.m', 8)" style="font-weight:bold">ReadFile</a> (<a href="matlab: opentoline('E:\3rd year\Image Pro\extended tasks\extended task wk2\ReadFile.m',8,0)">line 8</a>)
+a = imread(x);
+} 
+ShowFile(a);
+b = ReadFile('Images\SampleImages\Lincoln.jpg' );
+ShowFile(b);
+gray_image = rgb2gray(b);
+ShowFile(b);
+ShowFile(gray_image);
+GreyScale(b);
+help Read_Show_Gray
+  this will read an image for you 
+  Please enter a file path like:
+  this = 'E:\3rd year\Image Pro\extended tasks\extended task
+  wk2\Images\SampleImages\chestxray.jpg'
+  or this = 'Images\SampleImages\chestxray.jpg' 
+  if not the program will not work
+
+Read_Show_Gray('Images\SampleImages\Lincoln.jpg');
+
+Read_Show_Gray
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Read_Show_Gray', 'E:\3rd year\Image Pro\extended tasks\extended task wk2\Read_Show_Gray.m', 8)" style="font-weight:bold">Read_Show_Gray</a> (<a href="matlab: opentoline('E:\3rd year\Image Pro\extended tasks\extended task wk2\Read_Show_Gray.m',8,0)">line 8</a>)
+a = imread(x);
+} 
+Read_Show_Gray('Images\SampleImages\Lincoln.jpg');
+diary OFF

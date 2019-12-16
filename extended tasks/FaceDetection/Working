@@ -1,0 +1,153 @@
+clear
+webcamlist
+
+ans =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Integrated Webcam'}
+
+WebCamList = webcamlist;
+Cam = webcam(WebCamList{1});
+Cam
+
+Cam = 
+
+  <a href="matlab:helpPopup webcam" style="font-weight:bold">webcam</a> with properties:
+
+                     Name: 'Integrated Webcam'
+     AvailableResolutions: {1×7 cell}
+               Resolution: '340x340'
+                 Exposure: -5
+         WhiteBalanceMode: 'auto'
+               Saturation: 64
+               Brightness: 0
+             WhiteBalance: 4600
+                 Contrast: 0
+             ExposureMode: 'auto'
+                Sharpness: 2
+                      Hue: 0
+                    Gamma: 100
+                     Gain: 1
+    BacklightCompensation: 3
+
+preview(Cam)
+
+ans = 
+
+  <a href="matlab:helpPopup matlab.graphics.primitive.Image" style="font-weight:bold">Image</a> with properties:
+
+           CData: [340×340×3 double]
+    CDataMapping: 'direct'
+
+  Show <a href="matlab:if exist('ans', 'var'), matlab.graphics.internal.getForDisplay('ans', ans, 'matlab.graphics.primitive.Image'), else, matlab.graphics.internal.getForDisplay('ans'), end">all properties</a>
+
+closePreview(Cam);
+preview(Cam)
+
+ans = 
+
+  <a href="matlab:helpPopup matlab.graphics.primitive.Image" style="font-weight:bold">Image</a> with properties:
+
+           CData: [340×340×3 double]
+    CDataMapping: 'direct'
+
+  Show <a href="matlab:if exist('ans', 'var'), matlab.graphics.internal.getForDisplay('ans', ans, 'matlab.graphics.primitive.Image'), else, matlab.graphics.internal.getForDisplay('ans'), end">all properties</a>
+
+img = snapshot(cam);
+{Undefined function or variable 'cam'.
+} 
+img = snapshot(Cam);
+imshow(img);
+image(img);
+clear('cam');
+supportPackageInstaller
+faceDetector = vision.CascadeObjectDetector;
+bboxes = step(faceDetector, img);
+bboxe
+{Undefined function or variable 'bboxe'.
+} 
+bboxes
+
+bboxes =
+
+   208   206    56    56
+
+SnapshotFaceFind
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('webcam', 'C:\ProgramData\MATLAB\SupportPackages\R2018a\toolbox\matlab\webcam\supportpackages\@webcam\webcam.m', 116)" style="font-weight:bold">webcam</a> (<a href="matlab: opentoline('C:\ProgramData\MATLAB\SupportPackages\R2018a\toolbox\matlab\webcam\supportpackages\@webcam\webcam.m',116,0)">line 116</a>)
+An active connection to webcam, Integrated
+Webcam, already exists. You cannot create
+another connection to the same webcam.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SnapshotFaceFind', 'C:\Users\Ethan hebblewhite\Documents\Uni 3rd Year\1st term\Image Processing\extended tasks\FaceDetection\SnapshotFaceFind.m', 5)" style="font-weight:bold">SnapshotFaceFind</a> (<a href="matlab: opentoline('C:\Users\Ethan hebblewhite\Documents\Uni 3rd Year\1st term\Image Processing\extended tasks\FaceDetection\SnapshotFaceFind.m',5,0)">line 5</a>)
+cam = webcam(a{1});
+} 
+clear
+SnapshotFaceFind
+{Undefined function or variable
+'visionCascadeObjectDetector'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SnapshotFaceFind', 'C:\Users\Ethan hebblewhite\Documents\Uni 3rd Year\1st term\Image Processing\extended tasks\FaceDetection\SnapshotFaceFind.m', 11)" style="font-weight:bold">SnapshotFaceFind</a> (<a href="matlab: opentoline('C:\Users\Ethan hebblewhite\Documents\Uni 3rd Year\1st term\Image Processing\extended tasks\FaceDetection\SnapshotFaceFind.m',11,0)">line 11</a>)
+FaceDetector = visionCascadeObjectDetector;
+} 
+SnapshotFaceFind
+took a snapshot. checking for a face....
+no face found. trying again
+took a snapshot. checking for a face....
+no face found. trying again
+took a snapshot. checking for a face....
+no face found. trying again
+took a snapshot. checking for a face....
+no face found. trying again
+took a snapshot. checking for a face....
+face found
+
+ans =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Integrated Webcam'}
+
+
+SnapshotFaceFind
+took a snapshot. checking for a face....
+no face found. trying again
+took a snapshot. checking for a face....
+no face found. trying again
+took a snapshot. checking for a face....
+face found
+
+ans =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Integrated Webcam'}
+
+
+SnapshotFaceFind
+took a snapshot. checking for a face....
+no face found. trying again
+took a snapshot. checking for a face....
+no face found. trying again
+took a snapshot. checking for a face....
+face found
+
+ans =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Integrated Webcam'}
+
+SnapshotFaceFind
+took a snapshot. checking for a face....
+no face found. trying again
+took a snapshot. checking for a face....
+face found
+
+ans =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Integrated Webcam'}
+
+diary OFF

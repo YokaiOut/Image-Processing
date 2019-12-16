@@ -1,0 +1,36 @@
+diary ON
+A(rand(2,2)
+ A(rand(2,2)
+            
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+A(rand(2,2))
+{Undefined function or variable 'A'.
+} 
+A = rand(2,2)
+
+A =
+
+    0.6787    0.7431
+    0.7577    0.3922
+
+max(A)
+
+ans =
+
+    0.7577    0.7431
+
+min(A)
+
+ans =
+
+    0.6787    0.3922
+
+sort(A)
+
+ans =
+
+    0.6787    0.3922
+    0.7577    0.7431
+
+diary Save
